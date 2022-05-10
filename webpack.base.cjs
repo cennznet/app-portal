@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 
-const findPackages = require("../polkadot/scripts/findPackages.cjs");
+const findPackages = require("./polkadot/scripts/findPackages.cjs");
 
 function mapChunks(name, regs, inc) {
 	return regs.reduce(
@@ -29,7 +29,7 @@ function mapChunks(name, regs, inc) {
 function createWebpack(context, mode = "production") {
 	const pkgJson = require(path.join(context, "package.json"));
 	const alias = findPackages().reduce((alias, { dir, name }) => {
-		alias[name] = path.resolve(context, `../polkadot/packages/${dir}/src`);
+		alias[name] = path.resolve(context, `./polkadot/packages/${dir}/src`);
 		return alias;
 	}, {});
 	const plugins = fs.existsSync(path.join(context, "public"))
@@ -48,7 +48,7 @@ function createWebpack(context, mode = "production") {
 
 	return {
 		context,
-		entry: ["@babel/polyfill", "./libs/index.tsx"],
+		entry: ["@babel/polyfill", "./src/libs/index.tsx"],
 		mode,
 		module: {
 			rules: [
