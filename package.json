@@ -6,7 +6,8 @@
     "build": "yarn run build:i18n && yarn run build:clean && yarn run build:code",
     "build:clean": "yarn polkadot-dev-clean-build",
     "build:code": "yarn polkadot-exec-webpack --config webpack.config.cjs --mode production",
-    "build:i18n": "i18next-scanner --config i18next-scanner.config.cjs && node ./polkadot/scripts/i18nSort.cjs"
+    "build:i18n": "i18next-scanner --config i18next-scanner.config.cjs && node ./polkadot/scripts/i18nSort.cjs",
+    "postinstall": "yarn polkadot-dev-yarn-only"
   },
   "packageManager": "yarn@3.2.0",
   "devDependencies": {
