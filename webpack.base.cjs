@@ -30,6 +30,7 @@ function createWebpack(context, mode = "production") {
 	const pkgJson = require(path.join(context, "package.json"));
 	const alias = findPackages().reduce((alias, { dir, name }) => {
 		alias[name] = path.resolve(context, `./polkadot/packages/${dir}/src`);
+		alias["@"] = path.resolve(context, './src');
 		return alias;
 	}, {});
 	const plugins = fs.existsSync(path.join(context, "public"))
