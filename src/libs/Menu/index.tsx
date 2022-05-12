@@ -34,13 +34,13 @@ interface Props {
 function createExternals(t: TFunction): ItemRoute[] {
 	return [
 		{
-			href: "https://github.com/polkadot-js/apps",
+			href: "https://github.com/cennznet",
 			icon: "code-branch",
 			name: "github",
 			text: t<string>("nav.github", "GitHub", { ns: "apps-routing" }),
 		},
 		{
-			href: "https://wiki.polkadot.network",
+			href: "https://wiki.cennz.net",
 			icon: "book",
 			name: "wiki",
 			text: t<string>("nav.wiki", "Wiki", { ns: "apps-routing" }),
