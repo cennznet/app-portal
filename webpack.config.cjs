@@ -17,7 +17,10 @@ module.exports = merge(baseConfig(context), {
 		new HtmlWebpackPlugin({
 			PAGE_TITLE: "CENNZnet Portal",
 			inject: true,
-			template: path.join(context, `${hasPublic ? "src/public/" : ""}index.html`),
+			template: path.join(
+				context,
+				`${hasPublic ? "src/public/" : ""}index.html`
+			),
 		}),
 	],
 });
