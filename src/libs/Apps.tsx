@@ -11,7 +11,6 @@ import styled, { ThemeContext } from "styled-components";
 
 import AccountSidebar from "@polkadot/app-accounts/Sidebar";
 import { getSystemColor } from "@polkadot/apps-config";
-import GlobalStyle from "@polkadot/react-components/styles";
 import { useApi } from "@polkadot/react-hooks";
 import Signer from "@polkadot/react-signer";
 
@@ -19,6 +18,8 @@ import ConnectingOverlay from "./overlays/Connecting";
 import Content from "./Content";
 import Menu from "./Menu";
 import WarmUp from "./WarmUp";
+
+import GlobalStyle from "@/libs/styles";
 
 export const PORTAL_ID = "portals";
 
