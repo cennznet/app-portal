@@ -6,7 +6,7 @@ import type { Network } from "./types";
 import React, { useCallback, useMemo } from "react";
 import styled from "styled-components";
 
-import {ChainImg} from "@/libs/components";
+import { ChainImg } from "@/libs/components";
 
 import Url from "./Url";
 
