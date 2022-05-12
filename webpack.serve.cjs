@@ -18,7 +18,7 @@ module.exports = merge(baseConfig(__dirname, "development"), {
 		new HtmlWebpackPlugin({
 			PAGE_TITLE: "CENNZnet Portal",
 			inject: true,
-			template: path.join(__dirname, "public/index.html"),
+			template: path.join(__dirname, "src/public/index.html"),
 		}),
 	],
 	watchOptions: {
