@@ -6,7 +6,7 @@ import type { Network } from "./types";
 import React, { useCallback, useMemo } from "react";
 import styled from "styled-components";
 
-import { ChainImg } from "@/libs/components";
+import { ChainImg } from "@polkadot/react-components";
 
 import Url from "./Url";
 
@@ -57,7 +57,7 @@ function NetworkDisplay({
 				onClick={isUnreachable ? undefined : _selectUrl}
 			>
 				<ChainImg
-					className="endpointIcon"
+					className="endpointIcon chainImg"
 					isInline
 					logo={icon ?? "empty"}
 					withoutHl
@@ -110,5 +110,10 @@ export default React.memo(styled(NetworkDisplay)`
 		& + .endpointProvider {
 			margin-top: -0.125rem;
 		}
+	}
+
+	.chainImg {
+		border-radius: 0 !important;
+		background-color: transparent !important;
 	}
 `);
