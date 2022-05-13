@@ -6,11 +6,12 @@ import type { RuntimeVersion } from "@polkadot/types/interfaces";
 import React from "react";
 import styled from "styled-components";
 
-import { ChainImg, Icon } from "@polkadot/react-components";
+import { Icon } from "@polkadot/react-components";
 import { useApi, useCall, useIpfs, useToggle } from "@polkadot/react-hooks";
 import { BestNumber, Chain } from "@polkadot/react-query";
 
-import Endpoints from "../Endpoints";
+import { ChainImg } from "@/libs/components";
+import Endpoints from "@/libs/Endpoints";
 
 interface Props {
 	className?: string;

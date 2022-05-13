@@ -1521,18 +1521,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cennznet/app-portal@workspace:."
   dependencies:
-    "@babel/core": ^7.17.10
+    "@babel/core": ^7.17.9
     "@babel/register": ^7.17.7
     "@babel/runtime": ^7.17.9
     "@crustio/crust-pin": ^1.0.0
     "@pinata/sdk": ^1.1.25
-    "@polkadot/dev": ^0.66.17
+    "@polkadot/dev": ^0.66.9
     "@types/chart.js": ^2.9.37
     "@types/file-saver": ^2.0.5
     "@types/jest": ^27.4.1
     "@types/react-beautiful-dnd": ^13.1.2
     "@types/react-copy-to-clipboard": ^5.0.2
-    "@types/react-dom": ^18.0.3
+    "@types/react-dom": ^18.0.2
     "@types/react-router-dom": ^5.3.3
     "@types/store": ^2.0.2
     "@types/styled-components": ^5.1.25
@@ -1545,9 +1545,9 @@ __metadata:
     electron-builder-notarize: ^1.2.0
     i18next-scanner: ^3.1.0
     prettier: ^2.6.2
-    react: ^18.1.0
-    react-dom: ^18.1.0
-    react-is: ^18.1.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    react-is: ^18.0.0
     source-map-explorer: ^2.5.2
     styled-components: ^5.3.5
     webpack: ^5.72.0
@@ -2739,7 +2739,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/api-augment@npm:^8.3.2-2":
+"@polkadot/api-augment@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/api-augment@npm:8.3.2"
   dependencies:
@@ -2754,7 +2754,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/api-base@npm:^8.3.2-2":
+"@polkadot/api-base@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/api-base@npm:8.3.2"
   dependencies:
@@ -2767,7 +2767,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/api-contract@npm:^8.3.2-2":
+"@polkadot/api-contract@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/api-contract@npm:8.3.2"
   dependencies:
@@ -2783,7 +2783,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/api-derive@npm:^8.3.2-2":
+"@polkadot/api-derive@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/api-derive@npm:8.3.2"
   dependencies:
@@ -2801,7 +2801,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/api@npm:^8.3.2-2":
+"@polkadot/api@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/api@npm:8.3.2"
   dependencies:
@@ -3211,7 +3211,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@polkadot/dev@npm:^0.66.17, @polkadot/dev@npm:^0.66.9":
+"@polkadot/dev@npm:^0.66.9":
   version: 0.66.17
   resolution: "@polkadot/dev@npm:0.66.17"
   dependencies:
@@ -3369,7 +3369,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/hw-ledger@npm:^9.1.1":
+"@polkadot/hw-ledger@npm:^9.0.1":
   version: 9.1.1
   resolution: "@polkadot/hw-ledger@npm:9.1.1"
   dependencies:
@@ -3382,7 +3382,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/keyring@npm:^9.1.1":
+"@polkadot/keyring@npm:^9.0.1":
   version: 9.1.1
   resolution: "@polkadot/keyring@npm:9.1.1"
   dependencies:
@@ -3396,7 +3396,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/networks@npm:^9.1.1":
+"@polkadot/networks@npm:^9.0.1":
   version: 9.1.1
   resolution: "@polkadot/networks@npm:9.1.1"
   dependencies:
@@ -3407,15 +3407,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/phishing@npm:^0.12.15":
-  version: 0.12.21
-  resolution: "@polkadot/phishing@npm:0.12.21"
+"@polkadot/phishing@npm:^0.11.85":
+  version: 0.11.109
+  resolution: "@polkadot/phishing@npm:0.11.109"
   dependencies:
     "@babel/runtime": ^7.17.9
-    "@polkadot/util": ^9.1.1
-    "@polkadot/util-crypto": ^9.1.1
-    "@polkadot/x-fetch": ^9.1.1
-  checksum: 88aaaa4802098e6db95de744972167453411edb31a93197ad7f7fc31734265309bdba161070e119fbaae50bdc45d1630861a3126affa338d7f4f7edf38b5aa87
+    "@polkadot/util": ^9.0.1
+    "@polkadot/util-crypto": ^9.0.1
+    "@polkadot/x-fetch": ^9.0.1
+  checksum: 718c4701fe896b9186995ef2e0b6fc0b1e38108bea0b71a059d9e8c7f353f731da3df0bf697b1983779d6177443b66b28715011db3a047d1462e5358301f367b
   languageName: node
   linkType: hard
 
@@ -3562,7 +3562,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@polkadot/rpc-augment@npm:^8.3.2-2":
+"@polkadot/rpc-augment@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/rpc-augment@npm:8.3.2"
   dependencies:
@@ -3575,7 +3575,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/rpc-core@npm:^8.3.2-2":
+"@polkadot/rpc-core@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/rpc-core@npm:8.3.2"
   dependencies:
@@ -3589,7 +3589,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/rpc-provider@npm:^8.3.2-2":
+"@polkadot/rpc-provider@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/rpc-provider@npm:8.3.2"
   dependencies:
@@ -3622,7 +3622,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@polkadot/types-augment@npm:^8.3.2-2":
+"@polkadot/types-augment@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/types-augment@npm:8.3.2"
   dependencies:
@@ -3634,7 +3634,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/types-codec@npm:^8.3.2-2":
+"@polkadot/types-codec@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/types-codec@npm:8.3.2"
   dependencies:
@@ -3644,7 +3644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/types-create@npm:^8.3.2-2":
+"@polkadot/types-create@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/types-create@npm:8.3.2"
   dependencies:
@@ -3655,7 +3655,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/types-known@npm:^8.3.2-2":
+"@polkadot/types-known@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/types-known@npm:8.3.2"
   dependencies:
@@ -3669,7 +3669,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/types-support@npm:^8.3.2-2":
+"@polkadot/types-support@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/types-support@npm:8.3.2"
   dependencies:
@@ -3679,7 +3679,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/types@npm:^8.3.2-2":
+"@polkadot/types@npm:^8.2.1":
   version: 8.3.2
   resolution: "@polkadot/types@npm:8.3.2"
   dependencies:
@@ -3744,7 +3744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/util-crypto@npm:^9.1.1":
+"@polkadot/util-crypto@npm:^9.0.1":
   version: 9.1.1
   resolution: "@polkadot/util-crypto@npm:9.1.1"
   dependencies:
@@ -3765,7 +3765,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/util@npm:^9.1.1":
+"@polkadot/util@npm:^9.0.1":
   version: 9.1.1
   resolution: "@polkadot/util@npm:9.1.1"
   dependencies:
@@ -4803,7 +4803,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.0.0, @types/react-dom@npm:^18.0.2, @types/react-dom@npm:^18.0.3":
+"@types/react-dom@npm:^18.0.0, @types/react-dom@npm:^18.0.2":
   version: 18.0.3
   resolution: "@types/react-dom@npm:18.0.3"
   dependencies:
@@ -16813,7 +16813,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.0.0, react-dom@npm:^18.1.0":
+"react-dom@npm:^18.0.0":
   version: 18.1.0
   resolution: "react-dom@npm:18.1.0"
   dependencies:
@@ -16871,7 +16871,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^18.0.0, react-is@npm:^18.1.0":
+"react-is@npm:^18.0.0":
   version: 18.1.0
   resolution: "react-is@npm:18.1.0"
   checksum: d206a0fe6790851bff168727bfb896de02c5591695afb0c441163e8630136a3e13ee1a7ddd59fdccddcc93968b4721ae112c10f790b194b03b35a3dc13a355ef
@@ -17006,7 +17006,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.0.0, react@npm:^18.1.0":
+"react@npm:^18.0.0":
   version: 18.1.0
   resolution: "react@npm:18.1.0"
   dependencies:
@@ -19622,7 +19622,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.6.4":
+"typescript@npm:^4.6.3":
   version: 4.6.4
   resolution: "typescript@npm:4.6.4"
   bin:
@@ -19632,7 +19632,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^4.6.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^4.6.3#~builtin<compat/typescript>":
   version: 4.6.4
   resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"
   bin:
