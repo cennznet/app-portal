@@ -138,7 +138,10 @@ function NetworkSpecs({
 							label={t<string>("Network Name")}
 							value={networkSpecs.title}
 						/>
-						<ChainImg className="settings--networkSpecs-logo chainImg" />
+						<ChainImg
+							logo={chainInfo?.chain?.split(" ")[1]?.toLowerCase()}
+							className="settings--networkSpecs-logo chainImg"
+						/>
 					</div>
 				</td>
 				<td rowSpan={6}>
