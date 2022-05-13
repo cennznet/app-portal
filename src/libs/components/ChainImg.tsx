@@ -4,10 +4,8 @@
 import React, { useMemo } from "react";
 import styled from "styled-components";
 
-import { emptyLogos, nodeLogos, specLogos } from "@polkadot/apps-config";
+import { namedLogos, chainLogos, emptyLogos, nodeLogos, specLogos } from "@polkadot/apps-config";
 import { useApi } from "@polkadot/react-hooks";
-
-import { namedLogos, chainLogos } from "@/libs/constants";
 
 interface Props {
 	className?: string;

@@ -29,8 +29,12 @@ function mapChunks(name, regs, inc) {
 function createWebpack(context, mode = "production") {
 	const pkgJson = require(path.join(context, "package.json"));
 	const alias = findPackages().reduce((alias, { dir, name }) => {
-		alias[name] = path.resolve(context, `./polkadot/packages/${dir}/src`);
 		alias["@"] = path.resolve(context, "./src");
+		if (name.includes("apps-config")) {
+			alias[name] = path.resolve(context, `./src/libs/${dir}/src`);
+		} else {
+			alias[name] = path.resolve(context, `./polkadot/packages/${dir}/src`);
+		}
 		return alias;
 	}, {});
 	const plugins = fs.existsSync(path.join(context, "src/public"))

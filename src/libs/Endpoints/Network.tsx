@@ -59,7 +59,7 @@ function NetworkDisplay({
 				<ChainImg
 					className="endpointIcon"
 					isInline
-					logo={icon === "local" ? "empty" : icon || "empty"}
+					logo={icon ?? "empty"}
 					withoutHl
 				/>
 				<div className="endpointValue">{name}</div>

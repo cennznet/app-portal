@@ -7,8 +7,8 @@
     "paths": {
       "@polkadot/apps/*": ["polkadot/packages/apps/src/*"],
       "@polkadot/apps": ["polkadot/packages/apps/src"],
-      "@polkadot/apps-config": ["polkadot/packages/apps-config/src"],
-      "@polkadot/apps-config/*": ["polkadot/packages/apps-config/src/*"],
+      "@polkadot/apps-config": ["src/libs/apps-config/src"],
+      "@polkadot/apps-config/*": ["src/libs/apps-config/src/*"],
       "@polkadot/apps-routing": ["polkadot/packages/apps-routing/src"],
       "@polkadot/apps-routing/*": ["polkadot/packages/apps-routing/src/*"],
       "@polkadot/app-accounts": ["polkadot/packages/page-accounts/src"],
