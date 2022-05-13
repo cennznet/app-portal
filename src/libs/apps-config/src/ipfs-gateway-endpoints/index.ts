@@ -1,8 +1,8 @@
 // Copyright 2017-2022 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { TFunction } from "../types";
-import type { AuthIpfsEndpoint } from "./types";
+import type { TFunction } from "@polkadot/apps-config/types";
+import type { AuthIpfsEndpoint } from "@polkadot/apps-config/ipfs-gateway-endpoints/types";
 
 // Definitions here are with the following values -
 //   info: the name of a logo as defined in ../ui/logos, specifically in namedLogos

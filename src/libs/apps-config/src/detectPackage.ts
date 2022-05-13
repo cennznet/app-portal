@@ -5,7 +5,7 @@
 
 import { detectPackage } from "@polkadot/util";
 
-import others from "./detectOther";
-import { packageInfo } from "./packageInfo";
+import others from "@polkadot/apps-config/detectOther";
+import { packageInfo } from "@polkadot/apps-config/packageInfo";
 
 detectPackage(packageInfo, null, others);

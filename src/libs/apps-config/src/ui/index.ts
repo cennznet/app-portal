@@ -7,9 +7,9 @@ import { chainColours } from "@/libs/constants";
 export * from "./logos";
 
 export function getSystemIcon(
-	systemName: string,
-	specName: string
-): "beachball" | "polkadot" | "substrate" {
+	_systemName: string,
+	_specName: string
+): "beachball" {
 	return "beachball";
 }
 

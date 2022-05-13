@@ -1,8 +1,11 @@
 // Copyright 2017-2022 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { TFunction } from "../types";
-import type { EndpointOption, LinkOption } from "./types";
+import type { TFunction } from "@polkadot/apps-config/types";
+import type {
+	EndpointOption,
+	LinkOption,
+} from "@polkadot/apps-config/endpoints/types";
 
 interface SortOption {
 	isUnreachable?: boolean;

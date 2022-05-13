@@ -7,16 +7,15 @@
 // the actual RPC node it is corrected to (system.name RPC)
 
 // anything for a specific chain, most would probably fit into the node category (but allow for chain-specific)
-import { sanitize } from "../util";
-import emptyLogo from "./empty.svg";
-import extensionCENNZnet from "./extensions/cennznet.svg";
-import extensionPolkadotJs from "./extensions/polkadot-js.svg";
-import chainCENNZnet from "./chains/cennznet.svg";
-import chainDevelopment from "./chains/development.svg";
-import chainAzalea from "./chains/azalea.svg";
-import chainNikau from "./chains/nikau.svg";
-import chainRata from "./chains/rata.svg";
-
+import { sanitize } from "@polkadot/apps-config/ui/util";
+import emptyLogo from "@polkadot/apps-config/ui/logos/empty.svg";
+import extensionCENNZnet from "@polkadot/apps-config/ui/logos/extensions/cennznet.svg";
+import extensionPolkadotJs from "@polkadot/apps-config/ui/logos/extensions/polkadot-js.svg";
+import chainCENNZnet from "@polkadot/apps-config/ui/logos/chains/cennznet.svg";
+import chainDevelopment from "@polkadot/apps-config/ui/logos/chains/development.svg";
+import chainAzalea from "@polkadot/apps-config/ui/logos/chains/azalea.svg";
+import chainNikau from "@polkadot/apps-config/ui/logos/chains/nikau.svg";
+import chainRata from "@polkadot/apps-config/ui/logos/chains/rata.svg";
 
 // Alphabetical overrides based on the actual matched chain name
 // NOTE: This is as retrieved via system.chain RPC
