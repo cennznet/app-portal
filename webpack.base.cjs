@@ -33,11 +33,11 @@ function createWebpack(context, mode = "production") {
 		alias["@"] = path.resolve(context, "./src");
 		return alias;
 	}, {});
-	const plugins = fs.existsSync(path.join(context, "public"))
+	const plugins = fs.existsSync(path.join(context, "src/public"))
 		? new CopyWebpackPlugin({
 				patterns: [
 					{
-						from: "public",
+						from: "src/public",
 						globOptions: {
 							dot: true,
 							ignore: ["**/index.html"],

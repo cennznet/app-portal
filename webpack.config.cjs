@@ -9,7 +9,7 @@ const { merge } = require("webpack-merge");
 const baseConfig = require("./webpack.base.cjs");
 
 const context = __dirname;
-const hasPublic = fs.existsSync(path.join(context, "public"));
+const hasPublic = fs.existsSync(path.join(context, "src/public"));
 
 module.exports = merge(baseConfig(context), {
 	devtool: process.env.BUILD_ANALYZE ? "source-map" : false,
@@ -17,7 +17,10 @@ module.exports = merge(baseConfig(context), {
 		new HtmlWebpackPlugin({
 			PAGE_TITLE: "CENNZnet Portal",
 			inject: true,
-			template: path.join(context, `${hasPublic ? "public/" : ""}index.html`),
+			template: path.join(
+				context,
+				`${hasPublic ? "src/public/" : ""}index.html`
+			),
 		}),
 	],
 });
