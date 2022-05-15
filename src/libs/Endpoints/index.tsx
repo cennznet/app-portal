@@ -10,6 +10,7 @@ import React, { useCallback, useMemo, useState } from "react";
 import store from "store";
 import styled from "styled-components";
 
+import { createWsEndpoints } from "@polkadot/apps-config/endpoints";
 import { Button, Input, Sidebar } from "@polkadot/react-components";
 import { settings } from "@polkadot/ui-settings";
 import { isAscii } from "@polkadot/util";
@@ -17,7 +18,6 @@ import { isAscii } from "@polkadot/util";
 import { useTranslation } from "../translate";
 import GroupDisplay from "./Group";
 import { CUSTOM_ENDPOINT_KEY } from "@/libs/constants";
-import { createWsEndpoints } from "@/libs/Endpoints/utils";
 
 interface Props {
 	className?: string;

@@ -9,8 +9,9 @@ import type {
 import React, { useContext, useMemo } from "react";
 import styled, { ThemeContext } from "styled-components";
 
+import { getSystemColor } from "@polkadot/apps-config/ui";
 import AccountSidebar from "@polkadot/app-accounts/Sidebar";
-import { getSystemColor } from "@polkadot/apps-config";
+import GlobalStyle from "@polkadot/react-components/styles";
 import { useApi } from "@polkadot/react-hooks";
 import Signer from "@polkadot/react-signer";
 
@@ -19,21 +20,13 @@ import Content from "./Content";
 import Menu from "./Menu";
 import WarmUp from "./WarmUp";
 
-import GlobalStyle from "@/libs/styles";
-
 export const PORTAL_ID = "portals";
 
 function Apps({ className = "" }: Props): React.ReactElement<Props> {
 	const { theme } = useContext(ThemeContext as React.Context<ThemeDef>);
-	const { isDevelopment, specName, systemChain, systemName } = useApi();
+	const { systemChain } = useApi();
 
-	const uiHighlight = useMemo(
-		() =>
-			isDevelopment
-				? undefined
-				: getSystemColor(systemChain, systemName, specName),
-		[isDevelopment, specName, systemChain, systemName]
-	);
+	const uiHighlight = useMemo(() => getSystemColor(systemChain), [systemChain]);
 
 	return (
 		<>
