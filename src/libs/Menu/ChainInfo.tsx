@@ -6,11 +6,10 @@ import type { RuntimeVersion } from "@polkadot/types/interfaces";
 import React from "react";
 import styled from "styled-components";
 
-import { Icon } from "@polkadot/react-components";
+import { ChainImg, Icon } from "@polkadot/react-components";
 import { useApi, useCall, useIpfs, useToggle } from "@polkadot/react-hooks";
 import { BestNumber, Chain } from "@polkadot/react-query";
 
-import { ChainImg } from "@/libs/components";
 import Endpoints from "@/libs/Endpoints";
 
 interface Props {
@@ -34,7 +33,7 @@ function ChainInfo({ className }: Props): React.ReactElement<Props> {
 				} highlight--color-contrast`}
 				onClick={toggleEndpoints}
 			>
-				<ChainImg />
+				<ChainImg className="chainImg" />
 				<div className="info media--1000">
 					<Chain className="chain" />
 					{runtimeVersion && (
@@ -112,6 +111,11 @@ export default React.memo(styled(ChainInfo)`
 				line-height: 1.2;
 				letter-spacing: -0.01em;
 			}
+		}
+
+		.chainImg {
+			border-radius: 0 !important;
+			background-color: transparent !important;
 		}
 	}
 `);
