@@ -5,7 +5,7 @@ import type { TFunction } from "i18next";
 import type { ApiProps } from "@polkadot/react-api/types";
 import type { AccountId } from "@polkadot/types/interfaces";
 import type { Group, Groups, ItemRoute } from "@/libs/Menu/types";
-import type { Route, Routes } from "@/libs/Routes/types";
+import type { Route, Routes } from "@polkadot/apps-routing/types";
 
 import React, { useMemo, useRef } from "react";
 import { useLocation } from "react-router-dom";
@@ -25,7 +25,7 @@ import Grouping from "@/libs/Menu/Grouping";
 import Item from "@/libs/Menu/Item";
 import NodeInfo from "@/libs/Menu/NodeInfo";
 
-import createRoutes from "@/libs/Routes";
+import createRoutes from "@polkadot/apps-routing";
 
 interface Props {
 	className?: string;
