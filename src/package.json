@@ -1,6 +1,6 @@
 {
   "name": "@cennznet/app-portal-src",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "dependencies": {
     "@babel/core": "^7.17.9",
     "@babel/polyfill": "^7.12.1",
