@@ -31,7 +31,7 @@ function createWebpack(context, mode = "production") {
 	const alias = findPackages().reduce((alias, { dir, name }) => {
 		alias["@"] = path.resolve(context, "./src");
 		if (name.includes("apps-config") || name.includes("app-settings") || name.includes("apps-routing")) {
-			alias[name] = path.resolve(context, `./src/libs/${dir}/src`);
+			alias[name] = path.resolve(context, `./src/libs/${dir}`);
 		} else {
 			alias[name] = path.resolve(context, `./polkadot/packages/${dir}/src`);
 		}
