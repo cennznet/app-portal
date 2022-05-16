@@ -6,3 +6,5 @@ export const chainColours: Record<string, string> = {
 	"cennznet rata": "#9847FF",
 	"development": "#808080",
 };
+
+export const COMMIT_HASH: string = String(process.env.COMMIT_HASH);
