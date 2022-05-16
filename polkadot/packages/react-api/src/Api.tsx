@@ -213,15 +213,6 @@ async function createApi (apiUrl: string, signer: ApiSigner, onError: (error: un
       registry,
       signer,
       types,
-      signedExtensions: {
-        ChargeTransactionPayment: {
-          extrinsic: {
-            tip: 'Compact<Balance>',
-            feeExchange: 'Option<u32>',
-          },
-          payload: {},
-        },
-      },
       typesBundle,
       typesChain
     });
