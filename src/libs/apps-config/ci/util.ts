@@ -7,8 +7,8 @@ import { ApiPromise, WsProvider } from "@polkadot/api";
 import { assert, isError, isString } from "@polkadot/util";
 import { fetch } from "@polkadot/x-fetch";
 
-import { typesBundle, typesChain } from "@/libs/apps-config/api";
-import { createWsEndpoints } from "@/libs/apps-config/endpoints";
+import { typesBundle, typesChain } from "@polkadot/apps-config/api";
+import { createWsEndpoints } from "@polkadot/apps-config/endpoints";
 
 interface Endpoint {
 	name: string;

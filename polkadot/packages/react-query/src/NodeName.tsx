@@ -16,7 +16,7 @@ function NodeName ({ children, className = '', label }: Props): React.ReactEleme
 
   return (
     <div className={className}>
-      {label || ''}{systemName}{children}
+      {label || ''}{systemName?.replace("CENNZnet ", "")}{children}
     </div>
   );
 }
