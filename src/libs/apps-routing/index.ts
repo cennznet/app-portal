@@ -13,6 +13,7 @@ import js from "@polkadot/apps-routing/js";
 import rpc from "@polkadot/apps-routing/rpc";
 import settings from "@polkadot/apps-routing/settings";
 import signing from "@polkadot/apps-routing/signing";
+import storage from "@polkadot/apps-routing/storage";
 import sudo from "@polkadot/apps-routing/sudo";
 
 export default function create(t: TFunction): Routes {
@@ -20,6 +21,7 @@ export default function create(t: TFunction): Routes {
 		accounts(t),
 		addresses(t),
 		explorer(t),
+		storage(t),
 		extrinsics(t),
 		rpc(t),
 		signing(t),
