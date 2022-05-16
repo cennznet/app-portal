@@ -14,8 +14,8 @@ import { COMMIT_HASH } from "@/libs/constants";
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const pkgJson = require("@/package.json") as { version: string };
 
-const uiInfo = `App-Portal v${pkgJson.version} ${
-	COMMIT_HASH ? `@ ${COMMIT_HASH.substring(0, 10)}` : ""
+const uiInfo = `v${pkgJson.version} ${
+	COMMIT_HASH !== "undefined" ? `@ ${COMMIT_HASH.substring(0, 10)}` : ""
 }`;
 
 function NodeInfo({ className = "" }: Props): React.ReactElement<Props> {
@@ -25,15 +25,22 @@ function NodeInfo({ className = "" }: Props): React.ReactElement<Props> {
 		<div
 			className={`${className} media--1400 highlight--color-contrast ui--NodeInfo`}
 		>
+			<div>
+				App-Portal <span className="monospace">{uiInfo}</span>
+			</div>
 			{isApiReady && (
 				<div>
 					<NodeName />
 					&nbsp;
-					<NodeVersion label="v" />
+					<NodeVersion label="v" className="monospace" />
 				</div>
 			)}
-			<div>{api.libraryInfo.replace("@polkadot/", "")}</div>
-			<div>{uiInfo}</div>
+			<div>
+				api{" "}
+				<span className="monospace">
+					{api.libraryInfo.replace("@polkadot/", "").replace("api ", "")}
+				</span>
+			</div>
 		</div>
 	);
 }
@@ -51,5 +58,9 @@ export default React.memo(styled(NodeInfo)`
 		> div {
 			display: inline-block;
 		}
+	}
+
+	.monospace {
+		font-family: monospace;
 	}
 `);
