@@ -9,10 +9,14 @@ import styled from "styled-components";
 import { useApi } from "@polkadot/react-hooks";
 import { NodeName, NodeVersion } from "@polkadot/react-query";
 
+import { COMMIT_HASH } from "@/libs/constants";
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const pkgJson = require("@/package.json") as { version: string };
 
-const uiInfo = `CENNZnet Portal v${pkgJson.version}`;
+const uiInfo = `App-Portal v${pkgJson.version} ${
+	COMMIT_HASH ? `@ ${COMMIT_HASH.substring(0, 10)}` : ""
+}`;
 
 function NodeInfo({ className = "" }: Props): React.ReactElement<Props> {
 	const { api, isApiReady } = useApi();
