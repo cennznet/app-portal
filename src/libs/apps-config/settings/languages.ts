@@ -1,8 +1,8 @@
 // Copyright 2017-2022 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { TFunction } from "@/libs/apps-config/types";
-import type { Option } from "@/libs/apps-config/settings/types";
+import type { TFunction } from "@polkadot/apps-config/types";
+import type { Option } from "@polkadot/apps-config/settings/types";
 
 export function createLanguages(t: TFunction): Option[] {
 	return [

@@ -1,8 +1,8 @@
 // Copyright 2017-2022 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { TFunction } from "@/libs/apps-config/types";
-import type { LinkOption } from "@/libs/apps-config/endpoints/types";
+import type { TFunction } from "@polkadot/apps-config/types";
+import type { LinkOption } from "@polkadot/apps-config/endpoints/types";
 
 export const CUSTOM_ENDPOINT_KEY = "polkadot-app-custom-endpoints";
 

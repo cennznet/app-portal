@@ -3,10 +3,10 @@
 
 import type { OverrideBundleType } from "@polkadot/types/types";
 
-import typesChain from "@/libs/apps-config/api/chain";
+import typesChain from "@polkadot/apps-config/api/chain";
 
-export * from "@/libs/apps-config/api/constants";
-export * from "@/libs/apps-config/api/params";
+export * from "@polkadot/apps-config/api/constants";
+export * from "@polkadot/apps-config/api/params";
 
 export function getChainTypes(
 	_specName: string,

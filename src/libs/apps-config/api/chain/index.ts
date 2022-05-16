@@ -3,7 +3,7 @@
 
 import { typesChain } from "@phala/typedefs";
 
-import CrustMaxwell from "@/libs/apps-config/api/chain/crust-maxwell";
+import CrustMaxwell from "@polkadot/apps-config/api/chain/crust-maxwell";
 
 // alphabetical, based on the actual displayed name
 export default {

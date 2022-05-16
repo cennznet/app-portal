@@ -9,13 +9,13 @@ import { Route, Switch } from "react-router";
 import { HelpOverlay, Tabs } from "@polkadot/react-components";
 import { useApi } from "@polkadot/react-hooks";
 
-import md from "@/libs/page-settings/md/basics.md";
-import Developer from "@/libs/page-settings/Developer";
-import General from "@/libs/page-settings/General";
-import I18n from "@/libs/page-settings/I18n";
-import Metadata from "@/libs/page-settings/Metadata";
-import { useTranslation } from "@/libs/page-settings/translate";
-import useCounter from "@/libs/page-settings/useCounter";
+import md from "@polkadot/app-settings/md/basics.md";
+import Developer from "@polkadot/app-settings/Developer";
+import General from "@polkadot/app-settings/General";
+import I18n from "@polkadot/app-settings/I18n";
+import Metadata from "@polkadot/app-settings/Metadata";
+import { useTranslation } from "@polkadot/app-settings/translate";
+import useCounter from "@polkadot/app-settings/useCounter";
 
 export { useCounter };
 

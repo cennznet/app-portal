@@ -1,7 +1,7 @@
 // Copyright 2017-2022 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { TOptions } from "@/libs/apps-config/types";
+import { TOptions } from "@polkadot/apps-config/types";
 
 export function defaultT(
 	keyOrText: string,

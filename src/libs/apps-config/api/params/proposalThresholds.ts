@@ -7,7 +7,7 @@ import {
 	KULUPU_GENESIS,
 	KUSAMA_GENESIS,
 	POLKADOT_GENESIS,
-} from "@/libs/apps-config/api/constants";
+} from "@polkadot/apps-config/api/constants";
 
 // normal fast-track proposals
 const FAST_TRACK: Record<string, number> = {

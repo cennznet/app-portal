@@ -11,12 +11,12 @@ import { Button, Dropdown, MarkWarning } from "@polkadot/react-components";
 import { useApi, useLedger } from "@polkadot/react-hooks";
 import { settings } from "@polkadot/ui-settings";
 
-import { useTranslation } from "@/libs/page-settings/translate";
+import { useTranslation } from "@polkadot/app-settings/translate";
 import {
 	createIdenticon,
 	save,
 	saveAndReload,
-} from "@/libs/page-settings/util";
+} from "@polkadot/app-settings/util";
 
 interface Props {
 	className?: string;

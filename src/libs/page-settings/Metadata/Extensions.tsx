@@ -1,7 +1,7 @@
 // Copyright 2017-2022 @polkadot/app-settings authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { ChainInfo } from "@/libs/page-settings/types";
+import type { ChainInfo } from "@polkadot/app-settings/types";
 
 import React, { useCallback, useMemo, useRef, useState } from "react";
 
@@ -9,9 +9,9 @@ import { emptyLogos, extensionLogos } from "@polkadot/apps-config";
 import { Button, Dropdown, Spinner, Table } from "@polkadot/react-components";
 import { useToggle } from "@polkadot/react-hooks";
 
-import { useTranslation } from "@/libs/page-settings/translate";
-import useExtensions from "@/libs/page-settings/useExtensions";
-import iconOption from "@/libs/page-settings/Metadata/iconOption";
+import { useTranslation } from "@polkadot/app-settings/translate";
+import useExtensions from "@polkadot/app-settings/useExtensions";
+import iconOption from "@polkadot/app-settings/Metadata/iconOption";
 
 interface Props {
 	chainInfo: ChainInfo | null;

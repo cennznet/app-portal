@@ -18,8 +18,8 @@ import languageCache from "@polkadot/react-components/i18n/cache";
 import { useToggle } from "@polkadot/react-hooks";
 import { settings } from "@polkadot/ui-settings";
 
-import { useTranslation } from "@/libs/page-settings/translate";
-import StringInput from "@/libs/page-settings/I18n/StringInput";
+import { useTranslation } from "@polkadot/app-settings/translate";
+import StringInput from "@polkadot/app-settings/I18n/StringInput";
 
 type Progress = [
 	[number, number, number],

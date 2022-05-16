@@ -2,18 +2,18 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { TFunction } from "i18next";
-import type { Routes } from "@/libs/apps-routing/types";
+import type { Routes } from "@polkadot/apps-routing/types";
 
-import accounts from "@/libs/apps-routing/accounts";
-import addresses from "@/libs/apps-routing/addresses";
-import explorer from "@/libs/apps-routing/explorer";
-import extrinsics from "@/libs/apps-routing/extrinsics";
-import files from "@/libs/apps-routing/files";
-import js from "@/libs/apps-routing/js";
-import rpc from "@/libs/apps-routing/rpc";
-import settings from "@/libs/apps-routing/settings";
-import signing from "@/libs/apps-routing/signing";
-import sudo from "@/libs/apps-routing/sudo";
+import accounts from "@polkadot/apps-routing/accounts";
+import addresses from "@polkadot/apps-routing/addresses";
+import explorer from "@polkadot/apps-routing/explorer";
+import extrinsics from "@polkadot/apps-routing/extrinsics";
+import files from "@polkadot/apps-routing/files";
+import js from "@polkadot/apps-routing/js";
+import rpc from "@polkadot/apps-routing/rpc";
+import settings from "@polkadot/apps-routing/settings";
+import signing from "@polkadot/apps-routing/signing";
+import sudo from "@polkadot/apps-routing/sudo";
 
 export default function create(t: TFunction): Routes {
 	return [

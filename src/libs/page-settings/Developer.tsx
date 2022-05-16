@@ -18,7 +18,7 @@ import {
 import { useApi } from "@polkadot/react-hooks";
 import { isJsonObject, stringToU8a, u8aToString } from "@polkadot/util";
 
-import { useTranslation } from "@/libs/page-settings/translate";
+import { useTranslation } from "@polkadot/app-settings/translate";
 
 const EMPTY_CODE = "{\n\n}";
 const EMPTY_TYPES = {};

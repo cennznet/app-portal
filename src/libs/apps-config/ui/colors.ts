@@ -3,7 +3,7 @@
 
 /* eslint sort-keys: ["error", "asc", { caseSensitive: false }] */
 
-import { sanitize } from "@/libs/apps-config/ui/util";
+import { sanitize } from "@polkadot/apps-config/ui/util";
 
 // The mapping here is done on the actual chain name (system.chain RPC) or
 // the actual RPC node it is corrected to (system.name RPC)
