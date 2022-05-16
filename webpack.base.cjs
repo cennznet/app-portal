@@ -11,6 +11,11 @@ const webpack = require("webpack");
 
 const findPackages = require("./polkadot/scripts/findPackages.cjs");
 
+const COMMIT_HASH = require("child_process")
+	.execSync("git rev-parse --short HEAD")
+	.toString()
+	.trim();
+
 function mapChunks(name, regs, inc) {
 	return regs.reduce(
 		(result, test, index) => ({
@@ -180,6 +185,7 @@ function createWebpack(context, mode = "production") {
 					NODE_ENV: JSON.stringify(mode),
 					VERSION: JSON.stringify(pkgJson.version),
 					WS_URL: JSON.stringify(process.env.WS_URL),
+					COMMIT_HASH: JSON.stringify(COMMIT_HASH),
 				},
 			}),
 			new webpack.optimize.SplitChunksPlugin(),

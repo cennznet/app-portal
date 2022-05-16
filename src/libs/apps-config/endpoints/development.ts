@@ -4,7 +4,7 @@
 import type { TFunction } from "@polkadot/apps-config/types";
 import type { LinkOption } from "@polkadot/apps-config/endpoints/types";
 
-export const CUSTOM_ENDPOINT_KEY = "polkadot-app-custom-endpoints";
+import { CUSTOM_ENDPOINT_KEY } from "@/libs/constants";
 
 export function createOwn(t: TFunction): LinkOption[] {
 	try {
