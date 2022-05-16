@@ -2,16 +2,15 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { TFunction } from "i18next";
-import type { Route, Routes } from "@polkadot/apps-routing/types";
 import type { ApiProps } from "@polkadot/react-api/types";
 import type { AccountId } from "@polkadot/types/interfaces";
-import type { Group, Groups, ItemRoute } from "./types";
+import type { Group, Groups, ItemRoute } from "@/libs/Menu/types";
+import type { Route, Routes } from "@polkadot/apps-routing/types";
 
 import React, { useMemo, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
-import createRoutes from "@polkadot/apps-routing";
 import {
 	useAccounts,
 	useApi,
@@ -19,12 +18,14 @@ import {
 	useTeleport,
 } from "@polkadot/react-hooks";
 
-import { findMissingApis } from "../endpoint";
-import { useTranslation } from "../translate";
-import ChainInfo from "./ChainInfo";
-import Grouping from "./Grouping";
-import Item from "./Item";
-import NodeInfo from "./NodeInfo";
+import { findMissingApis } from "@/libs/endpoint";
+import { useTranslation } from "@/libs/translate";
+import ChainInfo from "@/libs/Menu/ChainInfo";
+import Grouping from "@/libs/Menu/Grouping";
+import Item from "@/libs/Menu/Item";
+import NodeInfo from "@/libs/Menu/NodeInfo";
+
+import createRoutes from "@polkadot/apps-routing";
 
 interface Props {
 	className?: string;
@@ -33,13 +34,13 @@ interface Props {
 function createExternals(t: TFunction): ItemRoute[] {
 	return [
 		{
-			href: "https://github.com/polkadot-js/apps",
+			href: "https://github.com/cennznet",
 			icon: "code-branch",
 			name: "github",
 			text: t<string>("nav.github", "GitHub", { ns: "apps-routing" }),
 		},
 		{
-			href: "https://wiki.polkadot.network",
+			href: "https://wiki.cennz.net",
 			icon: "book",
 			name: "wiki",
 			text: t<string>("nav.wiki", "Wiki", { ns: "apps-routing" }),
@@ -132,7 +133,7 @@ function Menu({ className = "" }: Props): React.ReactElement<Props> {
 		accounts: t("Accounts"),
 		developer: t("Developer"),
 		files: t("Files"),
-		governance: t("Governance"),
+		// governance: t("Governance"),
 		network: t("Network"),
 		settings: t("Settings"),
 	});
