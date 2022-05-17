@@ -24,6 +24,8 @@ import StakingRedeemable from './StakingRedeemable';
 import StakingUnbonding from './StakingUnbonding';
 import { useTranslation } from './translate';
 
+import { useCENNZBalances } from "@/libs/hooks";
+
 // true to display, or (for bonded) provided values [own, ...all extras]
 export interface BalanceActiveType {
   available?: boolean;
@@ -494,10 +496,23 @@ function AddressInfo (props: Props): React.ReactElement<Props> {
     'vesting ': t<string>('via Vesting')
   });
 
+  const cennzBalances = useCENNZBalances(props.address);
+
   return (
     <div className={`ui--AddressInfo ${className}${withBalanceToggle ? ' ui--AddressInfo-expander' : ''}`}>
       <div className={`column${withBalanceToggle ? ' column--expander' : ''}`}>
-        {renderBalances(props, lookup.current, bestNumber, t)}
+        {/*{renderBalances(props, lookup.current, bestNumber, t)}*/}
+        {cennzBalances?.map((balance, index) => (
+          <React.Fragment key={index}>
+            <Label label={t<string>(["CENNZ", "CPAY"][index])} />
+            <FormatBalance
+              className='result'
+              formatIndex={0}
+              labelPost={<IconVoid />}
+              value={balance}
+            />
+          </React.Fragment>
+        ))}
         {withHexSessionId && withHexSessionId[0] && (
           <>
             <Label label={t<string>('session keys')} />

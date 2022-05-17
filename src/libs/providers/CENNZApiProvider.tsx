@@ -15,24 +15,9 @@ interface CENNZApiProviderProps {
 function CENNZApiProvider({
 	children,
 }: CENNZApiProviderProps): React.ReactElement {
-	const { isApiInitialized, state, setState } = useApi();
+	const { state, setState } = useApi();
 
-	useEffect(() => {
-		if (!isApiInitialized) return;
-
-		const tokenSymbol = registry.createType("Text", "");
-		const tokenDecimals = [registry.createType("u32", 4)];
-		const ss58Format = registry.chainSS58;
-		console.log("setting new chain properties");
-		registry.setChainProperties(
-			registry.createType("ChainProperties", {
-				ss58Format,
-				tokenDecimals,
-				tokenSymbol,
-			})
-		);
-	}, [isApiInitialized]);
-
+	// once state is initialized, update with our values
 	useEffect(() => {
 		if (!state?.systemChain || !state?.systemName) return;
 		if (
@@ -48,6 +33,17 @@ function CENNZApiProvider({
 			systemChain: removeCENNZnet(state.systemChain),
 			systemName: removeCENNZnet(state.systemName),
 		});
+
+		const tokenSymbol = registry.createType("Text", "");
+		const tokenDecimals = [registry.createType("u32", 4)];
+		const ss58Format = registry.chainSS58;
+		registry.setChainProperties(
+			registry.createType("ChainProperties", {
+				ss58Format,
+				tokenDecimals,
+				tokenSymbol,
+			})
+		);
 	}, [state]);
 
 	return (
