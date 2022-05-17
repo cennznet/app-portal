@@ -15,10 +15,12 @@ function useCENNZBalancesImpl(accountAddress: string) {
 	const CENNZ = isAzalea ? "1" : "16000";
 	const CPAY = isAzalea ? "2" : "16001";
 
-	return useCallMulti<Balance[]>([
-		[api.query?.genericAsset?.freeBalance, [CENNZ, accountAddress]],
-		[api.query?.genericAsset?.freeBalance, [CPAY, accountAddress]],
-	]);
+	return useCallMulti<Balance[]>(
+		[CENNZ, CPAY].map((assetId) => [
+			api.query.genericAsset.freeBalance,
+			[assetId, accountAddress],
+		])
+	);
 }
 
 export const useCENNZBalances = createNamedHook(
