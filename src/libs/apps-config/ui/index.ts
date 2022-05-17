@@ -1,8 +1,8 @@
 // Copyright 2017-2022 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { sanitize } from "./util";
-import { chainColours } from "@/libs/constants";
+import { sanitize } from "@polkadot/apps-config/ui/util";
+import { chainColors } from "@polkadot/apps-config/ui/colors";
 
 export * from "./logos";
 
@@ -14,5 +14,5 @@ export function getSystemIcon(
 }
 
 export function getSystemColor(systemChain: string): string | undefined {
-	return chainColours[sanitize(systemChain)];
+	return chainColors[sanitize(systemChain)];
 }

@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useContext, ReactNode } from "react";
+import React, { createContext, useLayoutEffect, useContext, ReactNode } from "react";
 import { useApi } from "@polkadot/react-hooks";
 import registry from "@polkadot/react-api/typeRegistry";
 
@@ -18,7 +18,7 @@ function CENNZApiProvider({
 	const { state, setState } = useApi();
 
 	// once state is initialized, update with our values
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (!state?.systemChain || !state?.systemName) return;
 		if (
 			!state.systemChain.includes("CENNZnet") ||
