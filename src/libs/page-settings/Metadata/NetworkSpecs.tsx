@@ -139,7 +139,7 @@ function NetworkSpecs({
 							value={networkSpecs.title}
 						/>
 						<ChainImg
-							logo={chainInfo?.chain?.split(" ")[1]?.toLowerCase()}
+							logo={chainInfo?.chain?.toLowerCase()}
 							className="settings--networkSpecs-logo chainImg"
 						/>
 					</div>
