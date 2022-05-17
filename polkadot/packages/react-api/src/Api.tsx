@@ -253,7 +253,7 @@ function Api ({ apiUrl, children, isElectron, store }: Props): React.ReactElemen
   );
   const apiRelay = useApiUrl(relayUrls);
   const value = useMemo<ApiProps>(
-    () => objectSpread({}, state, { api, apiEndpoint, apiError, apiRelay, apiUrl, extensions, isApiConnected, isApiInitialized, isElectron, isWaitingInjected: !extensions }),
+    () => objectSpread({}, state, { api, apiEndpoint, apiError, apiRelay, apiUrl, extensions, isApiConnected, isApiInitialized, isElectron, isWaitingInjected: !extensions, state, setState }),
     [apiError, extensions, isApiConnected, isApiInitialized, isElectron, state, apiEndpoint, apiRelay, apiUrl]
   );
 

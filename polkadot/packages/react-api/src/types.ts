@@ -6,6 +6,7 @@ import type { LinkOption } from '@polkadot/apps-config/settings/types';
 import type { InjectedExtension } from '@polkadot/extension-inject/types';
 
 import { ApiPromise } from '@polkadot/api';
+import { Dispatch, SetStateAction } from "react";
 
 // helpers for HOC props
 export type OmitProps<T, K> = Pick<T, Exclude<keyof T, K>>;
@@ -41,6 +42,8 @@ export interface ApiProps extends ApiState {
   isApiInitialized: boolean;
   isElectron: boolean;
   isWaitingInjected: boolean;
+  state: ApiState;
+  setState: Dispatch<SetStateAction<ApiState>>;
 }
 
 export interface OnChangeCbObs {
