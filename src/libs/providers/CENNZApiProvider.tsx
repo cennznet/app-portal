@@ -1,4 +1,9 @@
-import React, { createContext, useLayoutEffect, useContext, ReactNode } from "react";
+import React, {
+	createContext,
+	useLayoutEffect,
+	useContext,
+	ReactNode,
+} from "react";
 import { useApi } from "@polkadot/react-hooks";
 import registry from "@polkadot/react-api/typeRegistry";
 
