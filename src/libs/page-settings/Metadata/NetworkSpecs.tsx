@@ -199,19 +199,6 @@ function NetworkSpecs({
 					<Input
 						className="full"
 						help={t<string>(
-							'Unit decides the name of 1 unit token, e.g. "DOT" for Polkadot'
-						)}
-						isDisabled
-						label={t<string>("Unit")}
-						value={networkSpecs.unit}
-					/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<Input
-						className="full"
-						help={t<string>(
 							"Prefix indicates the ss58 address format in this network, it is a 16 bit unsigned integer that describes the precise format of the bytes of the address"
 						)}
 						isDisabled
