@@ -1,29 +1,14 @@
-import React, {
-	createContext,
-	useLayoutEffect,
-	useContext,
-	ReactNode,
-} from "react";
-import { useApi } from "@polkadot/react-hooks";
+import { createNamedHook, useApi } from "@polkadot/react-hooks";
+import { useCallback } from "react";
 import registry from "@polkadot/react-api/typeRegistry";
 
-type CENNZApiContextType = {};
-
-const CENNZApiContext = createContext<CENNZApiContextType>(
-	{} as CENNZApiContextType
-);
-
-interface CENNZApiProviderProps {
-	children: ReactNode;
-}
-
-function CENNZApiProvider({
-	children,
-}: CENNZApiProviderProps): React.ReactElement {
+/**
+ * Override Api with CENNZnet values
+ */
+function useApiOverrideImpl(): () => void {
 	const { state, setState } = useApi();
 
-	// once state is initialized, update with our values
-	useLayoutEffect(() => {
+	return useCallback(() => {
 		if (!state?.systemChain || !state?.systemName) return;
 		if (
 			!state.systemChain.includes("CENNZnet") ||
@@ -50,16 +35,9 @@ function CENNZApiProvider({
 			})
 		);
 	}, [state]);
-
-	return (
-		<CENNZApiContext.Provider value={{} as CENNZApiContextType}>
-			{children}
-		</CENNZApiContext.Provider>
-	);
 }
 
-export default CENNZApiProvider;
-
-export function useCENNZApi(): CENNZApiContextType {
-	return useContext(CENNZApiContext);
-}
+export const useApiOverride = createNamedHook(
+	"useApiOverride",
+	useApiOverrideImpl
+);

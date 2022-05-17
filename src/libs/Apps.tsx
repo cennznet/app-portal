@@ -6,7 +6,7 @@ import type {
 	ThemeDef,
 } from "@polkadot/react-components/types";
 
-import React, { useContext, useMemo } from "react";
+import React, { useContext, useLayoutEffect, useMemo } from "react";
 import styled, { ThemeContext } from "styled-components";
 
 import { getSystemColor } from "@polkadot/apps-config/ui";
@@ -20,6 +20,8 @@ import Content from "./Content";
 import Menu from "./Menu";
 import WarmUp from "./WarmUp";
 
+import { useApiOverride } from "@/libs/hooks";
+
 export const PORTAL_ID = "portals";
 
 function Apps({ className = "" }: Props): React.ReactElement<Props> {
@@ -27,6 +29,12 @@ function Apps({ className = "" }: Props): React.ReactElement<Props> {
 	const { systemChain } = useApi();
 
 	const uiHighlight = useMemo(() => getSystemColor(systemChain), [systemChain]);
+
+	const apiOverride = useApiOverride();
+
+	useLayoutEffect(() => {
+		apiOverride?.();
+	}, [apiOverride]);
 
 	return (
 		<>

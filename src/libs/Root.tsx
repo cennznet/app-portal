@@ -17,8 +17,6 @@ import Apps from "./Apps";
 import { darkTheme, lightTheme } from "./themes";
 import WindowDimensions from "./WindowDimensions";
 
-import CENNZApiProvider from "@/libs/providers/CENNZApiProvider";
-
 interface Props {
 	isElectron: boolean;
 	store?: KeyringStore;
@@ -46,17 +44,15 @@ function Root({ isElectron, store }: Props): React.ReactElement<Props> {
 			<ThemeProvider theme={theme}>
 				<Queue>
 					<Api apiUrl={settings.apiUrl} isElectron={isElectron} store={store}>
-						<CENNZApiProvider>
-							<BlockAuthors>
-								<Events>
-									<HashRouter>
-										<WindowDimensions>
-											<Apps />
-										</WindowDimensions>
-									</HashRouter>
-								</Events>
-							</BlockAuthors>
-						</CENNZApiProvider>
+						<BlockAuthors>
+							<Events>
+								<HashRouter>
+									<WindowDimensions>
+										<Apps />
+									</WindowDimensions>
+								</HashRouter>
+							</Events>
+						</BlockAuthors>
 					</Api>
 				</Queue>
 			</ThemeProvider>
