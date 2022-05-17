@@ -1,8 +1,6 @@
 import type { Balance } from "@cennznet/types";
 
-import { createNamedHook } from "@polkadot/react-hooks/createNamedHook";
-import { useApi } from "@polkadot/react-hooks/useApi";
-import { useCallMulti } from "@polkadot/react-hooks";
+import { createNamedHook, useApi, useCallMulti } from "@polkadot/react-hooks";
 
 /**
  * Gets CENNZ balances for account
