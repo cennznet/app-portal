@@ -1,6 +1,3 @@
-// Copyright 2017-2022 @polkadot/react-hooks authors & contributors
-// SPDX-License-Identifier: Apache-2.0
-
 import type { Balance } from "@cennznet/types";
 
 import { createNamedHook } from "@polkadot/react-hooks/createNamedHook";
