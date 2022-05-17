@@ -24,14 +24,14 @@ export function createTesting(
 		[
 			{
 				info: "rata",
-				text: t("rpc.test.rata", "CENNZnet Rata", { ns: "apps-config" }),
+				text: t("rpc.test.rata", "Rata", { ns: "apps-config" }),
 				providers: {
 					CENNZnet: "wss://rata.centrality.me/public/ws",
 				},
 			},
 			{
 				info: "nikau",
-				text: t("rpc.test.nikau", "CENNZnet Nikau", { ns: "apps-config" }),
+				text: t("rpc.test.nikau", "Nikau", { ns: "apps-config" }),
 				providers: {
 					CENNZnet: "wss://nikau.centrality.me/public/ws",
 				},
