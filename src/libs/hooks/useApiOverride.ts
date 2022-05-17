@@ -1,14 +1,14 @@
 import { createNamedHook, useApi } from "@polkadot/react-hooks";
-import { useCallback } from "react";
+import { useLayoutEffect } from "react";
 import registry from "@polkadot/react-api/typeRegistry";
 
 /**
  * Override Api with CENNZnet values
  */
-function useApiOverrideImpl(): () => void {
+function useApiOverrideImpl() {
 	const { state, setState } = useApi();
 
-	return useCallback(() => {
+	useLayoutEffect(() => {
 		if (!state?.systemChain || !state?.systemName) return;
 		if (
 			!state.systemChain.includes("CENNZnet") ||

@@ -6,7 +6,7 @@ import type {
 	ThemeDef,
 } from "@polkadot/react-components/types";
 
-import React, { useContext, useLayoutEffect, useMemo } from "react";
+import React, { useContext, useMemo } from "react";
 import styled, { ThemeContext } from "styled-components";
 
 import { getSystemColor } from "@polkadot/apps-config/ui";
@@ -30,11 +30,7 @@ function Apps({ className = "" }: Props): React.ReactElement<Props> {
 
 	const uiHighlight = useMemo(() => getSystemColor(systemChain), [systemChain]);
 
-	const apiOverride = useApiOverride();
-
-	useLayoutEffect(() => {
-		apiOverride?.();
-	}, [apiOverride]);
+	useApiOverride();
 
 	return (
 		<>
