@@ -53,8 +53,9 @@ interface ChainData {
   systemVersion: string;
 }
 
-export const DEFAULT_DECIMALS = registry.createType('u32', 4);
+export const DEFAULT_DECIMALS = registry.createType('u32', 12);
 export const DEFAULT_SS58 = registry.createType('u32', addressDefaults.prefix);
+export const DEFAULT_AUX = ['Aux1', 'Aux2', 'Aux3', 'Aux4', 'Aux5', 'Aux6', 'Aux7', 'Aux8', 'Aux9'];
 
 let api: ApiPromise;
 
@@ -130,8 +131,8 @@ async function loadOnReady (api: ApiPromise, endpoint: LinkOption | null, inject
   const ss58Format = settings.prefix === -1
     ? chainSS58
     : settings.prefix;
-  const tokenSymbol = registry.createType('Text', 'CPAY');
-  const tokenDecimals = [DEFAULT_DECIMALS];
+  const tokenSymbol = properties.tokenSymbol.unwrapOr([formatBalance.getDefaults().unit, ...DEFAULT_AUX]);
+  const tokenDecimals = properties.tokenDecimals.unwrapOr([DEFAULT_DECIMALS]);
   const isEthereum = ethereumChains.includes(api.runtimeVersion.specName.toString());
   const isDevelopment = (systemChainType.isDevelopment || systemChainType.isLocal || isTestChain(systemChain));
 
