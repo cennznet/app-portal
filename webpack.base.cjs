@@ -11,6 +11,11 @@ const webpack = require("webpack");
 
 const findPackages = require("./polkadot/scripts/findPackages.cjs");
 
+const COMMIT_HASH = require("child_process")
+	.execSync("git rev-parse --short HEAD")
+	.toString()
+	.trim();
+
 function mapChunks(name, regs, inc) {
 	return regs.reduce(
 		(result, test, index) => ({
@@ -29,8 +34,16 @@ function mapChunks(name, regs, inc) {
 function createWebpack(context, mode = "production") {
 	const pkgJson = require(path.join(context, "package.json"));
 	const alias = findPackages().reduce((alias, { dir, name }) => {
-		alias[name] = path.resolve(context, `./polkadot/packages/${dir}/src`);
 		alias["@"] = path.resolve(context, "./src");
+		if (
+			name.includes("apps-config") ||
+			name.includes("app-settings") ||
+			name.includes("apps-routing")
+		) {
+			alias[name] = path.resolve(context, `./src/libs/${dir}`);
+		} else {
+			alias[name] = path.resolve(context, `./polkadot/packages/${dir}/src`);
+		}
 		return alias;
 	}, {});
 	const plugins = fs.existsSync(path.join(context, "src/public"))
@@ -172,6 +185,7 @@ function createWebpack(context, mode = "production") {
 					NODE_ENV: JSON.stringify(mode),
 					VERSION: JSON.stringify(pkgJson.version),
 					WS_URL: JSON.stringify(process.env.WS_URL),
+					COMMIT_HASH: JSON.stringify(COMMIT_HASH),
 				},
 			}),
 			new webpack.optimize.SplitChunksPlugin(),
