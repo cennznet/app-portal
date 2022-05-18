@@ -4,7 +4,7 @@
 import type { TFunction } from "@/libs/apps-config/types";
 import type { LinkOption } from "@/libs/apps-config/endpoints/types";
 
-import { CUSTOM_ENDPOINT_KEY } from "@/libs/constants";
+import { CUSTOM_ENDPOINT_KEY } from "@/constants";
 
 export function createOwn(t: TFunction): LinkOption[] {
 	try {

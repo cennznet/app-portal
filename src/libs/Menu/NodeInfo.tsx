@@ -9,7 +9,7 @@ import styled from "styled-components";
 import { useApi } from "@polkadot/react-hooks";
 import { NodeName, NodeVersion } from "@polkadot/react-query";
 
-import { COMMIT_HASH } from "@/libs/constants";
+import { COMMIT_HASH } from "@/constants";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const pkgJson = require("@/package.json") as { version: string };
