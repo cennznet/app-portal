@@ -15,7 +15,8 @@ import React, { useCallback, useContext, useEffect, useMemo, useState } from 're
 import styled, { ThemeContext } from 'styled-components';
 
 import { ApiPromise } from '@polkadot/api';
-import { AddressInfo, AddressSmall, Badge, Button, ChainLock, CryptoType, ExpandButton, Forget, Icon, LinkExternal, Menu, Popup, StatusContext, Tags } from '@polkadot/react-components';
+import { AddressSmall, Badge, Button, ChainLock, CryptoType, ExpandButton, Forget, Icon, LinkExternal, Menu, Popup, StatusContext, Tags } from '@polkadot/react-components';
+import { AddressInfo } from "@/libs/react-components";
 import { useAccountInfo, useApi, useBalancesAll, useBestNumber, useCall, useLedger, useStakingInfo, useToggle } from '@polkadot/react-hooks';
 import { keyring } from '@polkadot/ui-keyring';
 import { BN, BN_ZERO, formatBalance, formatNumber, isFunction } from '@polkadot/util';
@@ -668,7 +669,7 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
             data-testid='tags'
           >
             <Tags
-              value={tags}
+              value={["Locked"]}
               withTitle
             />
           </div>
@@ -680,14 +681,14 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
             address={address}
             balancesAll={balancesAll}
             withBalance={{
-              available: true,
-              bonded: true,
+              available: false,
+              bonded: false,
               locked: true,
-              redeemable: true,
-              reserved: true,
+              redeemable: false,
+              reserved: false,
               total: false,
-              unlocking: true,
-              vested: true
+              unlocking: false,
+              vested: false
             }}
             withExtended={false}
           />
