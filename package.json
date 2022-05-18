@@ -13,6 +13,7 @@
     "@babel/core": "^7.17.9",
     "@babel/register": "^7.17.7",
     "@babel/runtime": "^7.17.9",
+    "@cennznet/types": "^2.1.1-alpha.2",
     "@crustio/crust-pin": "^1.0.0",
     "@pinata/sdk": "^1.1.25",
     "@polkadot/dev": "^0.66.9",
@@ -33,6 +34,7 @@
     "electron-builder": "22.14.13",
     "electron-builder-notarize": "^1.2.0",
     "i18next-scanner": "^3.1.0",
+    "prettier": "^2.6.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-is": "^18.0.0",
@@ -70,8 +72,5 @@
   "workspaces": [
     "polkadot/packages/*",
     "src"
-  ],
-  "dependencies": {
-    "prettier": "^2.6.2"
-  }
+  ]
 }
