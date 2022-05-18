@@ -64,7 +64,7 @@ function Selection ({ className, defaultValue }: Props): React.ReactElement<Prop
         label={t<string>('using the selected account')}
         labelExtra={
           <BalanceFree
-            label={<label>{t<string>('free balance')}</label>}
+            label={<label>{t<string>('CPAY balance')}</label>}
             params={accountId}
           />
         }
