@@ -34,6 +34,16 @@ function useApiOverrideImpl() {
 				tokenSymbol,
 			})
 		);
+
+		registry.setSignedExtensions(registry.signedExtensions, {
+			ChargeTransactionPayment: {
+				extrinsic: {
+					tip: "Compact<Balance>",
+					feeExchange: "Option<u32>",
+				},
+				payload: {},
+			},
+		});
 	}, [state]);
 }
 
