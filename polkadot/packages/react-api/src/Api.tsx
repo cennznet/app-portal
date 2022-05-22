@@ -190,7 +190,7 @@ function getWellKnownChain (chain = 'polkadot') {
     case 'polkadot':
       return WellKnownChain.polkadot;
     case 'rococo':
-      return WellKnownChain.rococo_v2_2;
+      return WellKnownChain.rococo_v2_1;
     case 'westend':
       return WellKnownChain.westend2;
     default:

@@ -17,7 +17,7 @@ import { isAscii } from "@polkadot/util";
 
 import { useTranslation } from "../translate";
 import GroupDisplay from "./Group";
-import { CUSTOM_ENDPOINT_KEY } from "@/constants";
+import { CUSTOM_ENDPOINT_KEY } from "@/libs/constants";
 
 interface Props {
 	className?: string;

@@ -21,7 +21,8 @@ import Menu from "./Menu";
 import WarmUp from "./WarmUp";
 
 import { useApiOverride } from "@/libs/hooks";
-import { PORTAL_ID } from "@/constants";
+
+export const PORTAL_ID = "portals";
 
 function Apps({ className = "" }: Props): React.ReactElement<Props> {
 	const { theme } = useContext(ThemeContext as React.Context<ThemeDef>);
@@ -33,7 +34,7 @@ function Apps({ className = "" }: Props): React.ReactElement<Props> {
 
 	return (
 		<>
-			<GlobalStyle uiHighlight={uiHighlight || "#808080"} />
+			<GlobalStyle uiHighlight={uiHighlight} />
 			<div className={`apps--Wrapper theme--${theme} ${className}`}>
 				<Menu />
 				<AccountSidebar>
