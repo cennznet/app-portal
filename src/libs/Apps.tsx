@@ -21,7 +21,8 @@ import Menu from "./Menu";
 import WarmUp from "./WarmUp";
 
 import { useApiOverride } from "@/libs/hooks";
-import { PORTAL_ID } from "@/constants";
+
+export const PORTAL_ID = "portals";
 
 function Apps({ className = "" }: Props): React.ReactElement<Props> {
 	const { theme } = useContext(ThemeContext as React.Context<ThemeDef>);

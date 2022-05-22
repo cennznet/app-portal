@@ -190,7 +190,7 @@ function getWellKnownChain (chain = 'polkadot') {
     case 'polkadot':
       return WellKnownChain.polkadot;
     case 'rococo':
-      return WellKnownChain.rococo_v2_2;
+      return WellKnownChain.rococo_v2_1;
     case 'westend':
       return WellKnownChain.westend2;
     default:
@@ -213,15 +213,6 @@ async function createApi (apiUrl: string, signer: ApiSigner, onError: (error: un
       registry,
       signer,
       types,
-      signedExtensions: {
-        ChargeTransactionPayment: {
-          extrinsic: {
-            tip: 'Compact<Balance>',
-            feeExchange: 'Option<u32>',
-          },
-          payload: {},
-        },
-      },
       typesBundle,
       typesChain
     });
