@@ -34,7 +34,7 @@ function Apps({ className = "" }: Props): React.ReactElement<Props> {
 
 	return (
 		<>
-			<GlobalStyle uiHighlight={uiHighlight} />
+			<GlobalStyle uiHighlight={uiHighlight || "#808080"} />
 			<div className={`apps--Wrapper theme--${theme} ${className}`}>
 				<Menu />
 				<AccountSidebar>
