@@ -6,7 +6,7 @@ import registry from "@polkadot/react-api/typeRegistry";
  * Override Api with CENNZnet values
  */
 function useApiOverrideImpl() {
-	const { state, setState } = useApi();
+	const { api, state, setState } = useApi();
 
 	useLayoutEffect(() => {
 		if (!state?.systemChain || !state?.systemName) return;
@@ -27,6 +27,7 @@ function useApiOverrideImpl() {
 		const tokenSymbol = registry.createType("Text", "");
 		const tokenDecimals = [registry.createType("u32", 4)];
 		const ss58Format = registry.chainSS58;
+
 		registry.setChainProperties(
 			registry.createType("ChainProperties", {
 				ss58Format,
@@ -35,7 +36,7 @@ function useApiOverrideImpl() {
 			})
 		);
 
-		registry.setSignedExtensions(registry.signedExtensions, {
+		registry.setSignedExtensions(api.registry.signedExtensions, {
 			ChargeTransactionPayment: {
 				extrinsic: {
 					tip: "Compact<Balance>",
@@ -44,7 +45,7 @@ function useApiOverrideImpl() {
 				payload: {},
 			},
 		});
-	}, [state]);
+	}, [state, api]);
 }
 
 export const useApiOverride = createNamedHook(
