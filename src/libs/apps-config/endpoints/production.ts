@@ -25,7 +25,7 @@ export function createProduction(
 		[
 			{
 				info: "azalea",
-				text: t("rpc.prod.azalea", "CENNZnet Azalea", { ns: "apps-config" }),
+				text: t("rpc.prod.azalea", "Azalea", { ns: "apps-config" }),
 				providers: {
 					CENNZnet: "wss://cennznet.unfrastructure.io/public/ws",
 				},

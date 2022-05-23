@@ -20,6 +20,8 @@ import Content from "./Content";
 import Menu from "./Menu";
 import WarmUp from "./WarmUp";
 
+import { useApiOverride } from "@/libs/hooks";
+
 export const PORTAL_ID = "portals";
 
 function Apps({ className = "" }: Props): React.ReactElement<Props> {
@@ -28,9 +30,11 @@ function Apps({ className = "" }: Props): React.ReactElement<Props> {
 
 	const uiHighlight = useMemo(() => getSystemColor(systemChain), [systemChain]);
 
+	useApiOverride();
+
 	return (
 		<>
-			<GlobalStyle uiHighlight={uiHighlight} />
+			<GlobalStyle uiHighlight={uiHighlight || "#808080"} />
 			<div className={`apps--Wrapper theme--${theme} ${className}`}>
 				<Menu />
 				<AccountSidebar>

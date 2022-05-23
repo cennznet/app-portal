@@ -20,10 +20,10 @@ import chainRata from "@/libs/apps-config/ui/logos/chains/rata.svg";
 // Alphabetical overrides based on the actual matched chain name
 // NOTE: This is as retrieved via system.chain RPC
 export const chainLogos = Object.entries({
-	"cennznet azalea": chainCENNZnet,
-	"cennznet nikau": chainCENNZnet,
-	"cennznet rata": chainCENNZnet,
-	"development": chainDevelopment,
+	azalea: chainCENNZnet,
+	nikau: chainCENNZnet,
+	rata: chainCENNZnet,
+	development: chainDevelopment,
 }).reduce<Record<string, unknown>>(
 	(logos, [chain, logo]) => ({
 		...logos,

@@ -139,7 +139,7 @@ function NetworkSpecs({
 							value={networkSpecs.title}
 						/>
 						<ChainImg
-							logo={chainInfo?.chain?.split(" ")[1]?.toLowerCase()}
+							logo={chainInfo?.chain?.toLowerCase()}
 							className="settings--networkSpecs-logo chainImg"
 						/>
 					</div>
@@ -191,19 +191,6 @@ function NetworkSpecs({
 						isDisabled
 						label={t<string>("Genesis Hash")}
 						value={networkSpecs.genesisHash}
-					/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<Input
-						className="full"
-						help={t<string>(
-							'Unit decides the name of 1 unit token, e.g. "DOT" for Polkadot'
-						)}
-						isDisabled
-						label={t<string>("Unit")}
-						value={networkSpecs.unit}
 					/>
 				</td>
 			</tr>
