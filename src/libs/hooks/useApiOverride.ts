@@ -6,10 +6,10 @@ import registry from "@polkadot/react-api/typeRegistry";
  * Override Api with CENNZnet values
  */
 function useApiOverrideImpl() {
-	const { api } = useApi();
+	const { api, isApiReady } = useApi();
 
 	useLayoutEffect(() => {
-		if (!api) return;
+		if (!api || !isApiReady) return;
 
 		const tokenSymbol = registry.createType("Text", "");
 		const tokenDecimals = [registry.createType("u32", 4)];
@@ -32,7 +32,7 @@ function useApiOverrideImpl() {
 				payload: {},
 			},
 		});
-	}, [api]);
+	}, [api, isApiReady]);
 }
 
 export const useApiOverride = createNamedHook(
