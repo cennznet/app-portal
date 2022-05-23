@@ -20,9 +20,9 @@ const cennzRata = "#9847FF";
 // Alphabetical overrides based on the actual matched chain name
 // NOTE: This is as retrieved via the system.chain RPC
 export const chainColors: Record<string, string> = Object.entries({
-	Azalea: cennzAzalea,
-	Nikau: cennzNikau,
-	Rata: cennzRata,
+	"CENNZnet Azalea": cennzAzalea,
+	"CENNZnet Nikau": cennzNikau,
+	"CENNZnet Rata": cennzRata,
 }).reduce<Record<string, string>>(
 	(colors, [node, color]) => ({
 		...colors,
