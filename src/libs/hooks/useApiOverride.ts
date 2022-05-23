@@ -6,23 +6,10 @@ import registry from "@polkadot/react-api/typeRegistry";
  * Override Api with CENNZnet values
  */
 function useApiOverrideImpl() {
-	const { api, state, setState } = useApi();
+	const { api } = useApi();
 
 	useLayoutEffect(() => {
-		if (!state?.systemChain || !state?.systemName) return;
-		if (
-			!state.systemChain.includes("CENNZnet") ||
-			!state.systemName.includes("CENNZnet")
-		)
-			return;
-
-		const removeCENNZnet = (str: string) => str.replace("CENNZnet ", "");
-
-		setState({
-			...state,
-			systemChain: removeCENNZnet(state.systemChain),
-			systemName: removeCENNZnet(state.systemName),
-		});
+		if (!api) return;
 
 		const tokenSymbol = registry.createType("Text", "");
 		const tokenDecimals = [registry.createType("u32", 4)];
@@ -45,7 +32,7 @@ function useApiOverrideImpl() {
 				payload: {},
 			},
 		});
-	}, [state, api]);
+	}, [api]);
 }
 
 export const useApiOverride = createNamedHook(
